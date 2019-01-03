@@ -40,8 +40,8 @@ var config = {
         // new ExtractTextPlugin('style.css'),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
-        }),
-        new CleanWebpackPlugin(pathsToClean)
+        })
+        //new CleanWebpackPlugin(pathsToClean)
     ],
      module : {
         //这其中rules数组就是loader用来的匹配和转换资源的规则数组。
@@ -92,8 +92,10 @@ var config = {
                use: {
                    loader: 'babel-loader',
                    options: {
-                   presets: ['env','react']
-                   }
+                        presets: ['env', 'react'],
+                        plugins: [['import', {"libraryName": "antd", "style": "css"}]]
+                    }
+
                }
            },
            {
