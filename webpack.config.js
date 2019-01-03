@@ -17,7 +17,13 @@ var config = {
         // path: __dirname + '/build',
         path: path.resolve(__dirname, 'build'),
         // filename: 'bundle.js'
-        filename: 'bundle.[hash].js'
+        filename: 'bundle.[hash].js',
+        chunkFilename: '[name].bundle.[hash].js',
+     },
+     optimization: {
+         splitChunks: {
+           chunks: 'all'
+         }
      },
      devtool: 'source-map',
      devServer: {
