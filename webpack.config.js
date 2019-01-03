@@ -76,18 +76,18 @@ var config = {
                 //     use : ['css-loader','less-loader']
                 // }) 
              },
-             {
-                test: /\.js$/,
-                exclude: /(node_modules)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                    presets: ['env']
-                    }
-                }
-            },
+            //  {
+            //     test: /\.js$/,
+            //     exclude: /(node_modules)/,
+            //     use: {
+            //         loader: 'babel-loader',
+            //         options: {
+            //         presets: ['env']
+            //         }
+            //     }
+            // },
             {
-               test: /\.jsx$/,
+               test: /\.(jsx|js)$/,
                exclude: /(node_modules)/,
                use: {
                    loader: 'babel-loader',
